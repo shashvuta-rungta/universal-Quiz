@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+    {%block content%}  
+    <h2>Amazing Quiz</h2>
+    <form action="/q1">
+     <h3> Q1 how many seconds are there in a day </h3>
+     <label for="">A.86400</label>  
+     <input type="radio" name="choice" value="A" id="">
+     <label for="">B.86550</label> 
+     <input type="radio" name="choice" value="B" id="">
+     <label for="">c.512450</label>
+     <input type="radio" name="choice" value="C" id="">
+     <label for="">D.123445</label>
+     <input type="radio" name="choice" value="D" id="">
+    <button type="submit">
+        submit
+    </button>
+    </form>
+    {{message}}
+{%endblock%}

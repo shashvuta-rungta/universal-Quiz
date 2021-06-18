@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+    {%block content%}
+    <h2>Amazing Quiz</h2>
+    <form action="/q2">
+     <h3> Q2 how many minutes are there in a year </h3>
+     <label for="">A.123096</label>  
+     <input type="radio" name="choice" value="A" id="">
+     <label for="">B.678900</label> 
+     <input type="radio" name="choice" value="B" id="">
+     <label for="">c.862337</label>
+     <input type="radio" name="choice" value="C" id="">
+     <label for="">D.525600</label>
+     <input type="radio" name="choice" value="D" id="">
+    <button type="submit">
+        submit
+    </button>
+    </form>
+    {{message}}
+    {%endblock%}

@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+    {%block content%}
+     <h2>Amazing Quiz</h2>
+    <form action="/q3">
+     <h3> Q3 how many languages are there in the world </h3>
+     <label for="">A.2990</label>  
+     <input type="radio" name="choice" value="A" id="">
+     <label for="">B.8900</label> 
+     <input type="radio" name="choice" value="B" id="">
+     <label for="">c.6500</label>
+     <input type="radio" name="choice" value="C" id="">
+     <label for="">D.5600</label>
+     <input type="radio" name="choice" value="D" id="">
+    <button type="submit">
+        submit
+    </button>
+    </form>
+    {{message}}
+    {%endblock%}

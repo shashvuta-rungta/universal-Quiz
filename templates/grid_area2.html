@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 200px 1fr 1fr ;
+            grid-template-rows: 1fr 2fr 2fr 1fr;
+            grid-template-areas:
+            "header header header"
+            "sidebar content1 content1"
+            "sidebar content2 content3"
+            "footer footer footer";
+        }
+        .header{
+            grid-area:header;
+            background-image: linear-gradient(rgb(132, 0, 255),rgba(0, 0, 0, 0.233));
+            border: 3px solid;
+        }
+        .sidebar{
+            grid-area:sidebar;
+            background-image: linear-gradient(lime,rgb(0, 113, 128));
+            border: 3px solid;
+        }
+        .content1{
+            grid-area:content1;
+            background-image: linear-gradient(rgb(0, 225, 255),pink);
+            border: 3px solid;
+        }
+        .content2{
+           grid-area:content2; 
+           background-image: linear-gradient(rgba(0, 128, 117, 0.521),purple);
+           border: 3px solid;
+        }
+        .content3{
+           grid-area:content3;
+           background-image: linear-gradient(ivory,orange);
+           border: 3px solid;
+        }
+        .footer{
+           grid-area:footer;
+           background-image: linear-gradient(rgb(255, 0, 0),gold);
+           border: 3px solid;
+          }  
+         
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <div class="header">header</div>
+       <div class="sidebar">sidebar</div>
+       <div class="content1">content1</div>
+       <div class="content2">content2</div>
+       <div class="content3">content3</div>
+       <div class="footer">footer</div>
+    </div>   
+</body>
+</html>

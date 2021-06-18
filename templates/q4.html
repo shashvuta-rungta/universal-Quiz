@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+
+    {%block content%}
+    
+     <h2>Amazing Quiz</h2>
+    <form action="/q4">
+     <h3> Q4 how many countries are there in the world </h3>
+     <label for="">A.90</label>  
+     <input type="radio" name="choice" value="A" id="">
+     <label for="">B.195</label> 
+     <input type="radio" name="choice" value="B" id="">
+     <label for="">c.68</label>
+     <input type="radio" name="choice" value="C" id="">
+     <label for="">D.160</label>
+     <input type="radio" name="choice" value="D" id="">
+    <button type="submit">
+        submit
+    </button>
+    </form>
+    {{message}} 
+    {%endblock%}
+
