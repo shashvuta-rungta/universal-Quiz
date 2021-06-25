@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../static/style.css">
-
- 
-
+    {%block style%}
+    {%endblock style%}
 </head>
-{%block content%}
+<div class="banner"></div>
 <header>
     <nav>
         <ul>
-             <li><a href="">Home</a></li>
-             <li><a href="">Aboute me</a></li>
-             <li><a href="">login/register</a></li>
-             <li><a href="">contact</a></li>
-             <li><a href="">my project</a></li>
+             <li><a href="/home">Home</a></li>
+             <li><a href="/aboutme">About me</a></li>
+             {% if session['authenticated']%}
+                   <li><a href="/logout">Logout</a></li>
+                {% else %}
+                    <li><a href="/login_page">Login/Sign up</a></li>
+                {% endif %}
+             <li><a href="/get_q1">Quiz</a></li>
+             <li><a href="https://givemefive.ai/projects/nextcreator/shashvuta_rungta/">My project</a></li>
         </ul>
     </nav>
 </header>
+{%block content%}
 {%endblock%}

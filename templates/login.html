@@ -1,0 +1,97 @@
+{%extends 'base.html'%}
+{%block style%}
+    <style>
+        body{
+            background: url(../static/diego-ph-5LOhydOtTKU-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-y: 90%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        form{
+            width: 25%;
+            background-color: rgba(0, 0, 0, 0.794);
+            font-size: 25px;
+            line-height: 30px;
+            color: seashell;
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 5%;
+            box-shadow: 10px 10px 10px  black;
+        }
+        form input{
+            background: none;
+            border: none;
+            border-bottom: 3px solid rgb(4, 163, 226);
+            padding: 10px;
+        }
+        .button{
+            margin: 10% 0 0 0;
+            margin-bottom: 10%;
+        }
+     
+        form .login{
+            margin-left: 5%;
+        }
+        a{
+            color: #fff;
+        }
+        h2{
+            background: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 100%;
+            text-decoration: underline rgb(4, 142, 255);
+            text-shadow: 4px 4px black;
+            margin-bottom: 10%;
+            margin-left: 25%;
+        }
+      
+        .info a{
+            font-size: medium;
+        }
+        .signin{
+            margin-left: 5%;
+        }
+        input{
+            font-size: large;
+            color: rgb(239, 243, 241);
+        }
+        ::-webkit-input-placeholder { 
+            color: rgb(8, 170, 35);
+        }
+        .info{
+            width: 100%;
+            background-color: rgba(13, 122, 185, 0.7);
+
+        }
+    </style>
+ {%endblock style%}   
+
+ {%block content%}
+    <form action="/validate_user" method="POST">
+        {%if registered%}
+        <h2>{{message}}</h2>
+        {%endif%}
+        <h2>Login</h2>
+    <div class="signin">
+        
+        <div class="user">
+     
+            <input type="text" name="username" id="" placeholder="Username">
+        </div> <br>
+        <div class="password">
+ 
+            <input type="password" name="password" id="" placeholder="Password">
+        </div>
+        <div class="button">
+            <button type="submit" class="btn-gradient">Submit</button>
+        </div>
+        <div class="info">
+            <a href="/register">dont have an account? Sign Up here</a>
+        </div>
+    </div>
+    </form>
+{%endblock content%}

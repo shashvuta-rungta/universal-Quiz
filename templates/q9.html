@@ -1,0 +1,42 @@
+{%extends "base.html"%}
+
+    {%block content%}
+    <div class="score">
+        <h2> {{message}}</h2>
+      </div>
+    <div class="score">
+        <h2> Your Score = {{score}}</h2>
+      </div>
+    <div class="wrapper">
+        <form action="/q9" method="post">
+
+        <div class="title">Q4 how many minutes are there in a year</div>
+        <div class="box">
+            <input type="radio" name="choice" id="option-1" value="A">
+            <input type="radio" name="choice" id="option-2" value="B">
+            <input type="radio" name="choice" id="option-3" value="C">
+            <input type="radio" name="choice" id="option-4" value="D">
+       
+            <label for="option-1" class="option-1">
+              <div class="dot"></div> 
+                  <div class="text">862337</div>
+               
+            </label>
+            <label for="option-2" class="option-2">
+                <div class="dot"></div> 
+                    <div class="text">123096</div>
+                 
+              </label>
+              <label for="option-3" class="option-3">
+                <div class="dot"></div>
+                    <div class="text">678900</div>
+                </label>
+            <label for="option-4" class="option-4">
+                <div class="dot"></div>
+                     <div class="text">525600</div> 
+                      </label>
+              <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+{%endblock%}

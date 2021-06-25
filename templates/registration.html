@@ -1,66 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./static/style.css">
+{%extends 'base.html'%}
+{%block style%}
     <style>
-    form{
-        margin: 10%;
-        margin-top: 3%;
-        border-color:blue;
-        border-width: 2px;
-        border-style: double;
-        border-radius: 10px;
-        font-size: 25px;
-        color:yellow ;
-        width: 15%;
-        padding: 10px;
-        background-color: #000;
-        width: 14%;
-        
-    }
-    button{
-        background-color: cornflowerblue;
-        color: darkblue;
-        background-color:lightblue;
-    }
-    button:hover{
-        background-color: deepskyblue;
-    }
-    input{
-        background-color: dodgerblue;
-    }
-    </style>
-    <link rel="stylesheet" href="style.css">
-</head>
+        body{
+            background: url(../static/amanda-phung-1w2xsyc2wwI-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-y: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        form{
+            width: 25%;
+            font-size: 25px;
+            line-height: 30px;
+            color: seashell;
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 2%;
+        }
+        form input{
+            background: none;
+            border: none;
+            border-bottom: 3px solid rgb(5, 142, 167);
+            padding: 10px;
+            color: chartreuse;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+        .button{
+            margin: 5% 0 0 0;
+            margin-bottom: 10%;
+        }
+     
+        form .login{
+            margin-left: 5%;
+        }
+        a{
+            color: #fff;
+        }
+        h2{
+            background: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 100%;
+            text-decoration: underline red;
+            text-shadow: 4px 4px black;
+            margin-bottom: 5%;
+            margin-left: 0;
+        }
+        .signin{
+            margin-left: 10%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 10px;
 
-<body style="background-image: url(./static/registration.jpg);">
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./football.html">Football</a></li>
-                <li><a href="./more_football.html">More about Football</a></li>
-                <li><a href="./registration.html">Registration</a></li>
-                <li><a href="./my poject.html">My Projects</a></li>
-            </ul>
-        </nav>
+        }
+        .info a{
+            font-size: medium;
+            
+        }
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: pink;
+            font-size: small;
+        }
+        .info{
+            width: 300px;
+        }
+    </style>
+ {%endblock style%} 
+
+ {%block content%}
+ <div class="signin">
+ <form action="/validate_register" method="POST">
+        <h2>Registration</h2>
+       
+        <div class="user">
+            <input type="text" name="username" id="" placeholder="Username">
+        </div> <br>
+        <div class="password">
+            <input type="password" name="password" id="" placeholder="Password">
+        </div> <br>
+        <div class="password">
+            <input type="password" name="confirm_password" id="" placeholder="Confirm Password">
+        </div> <br>
+        <div class="email">
+            <input type="email" name="email" id="" placeholder="Email">
+        </div> <br>
+        <div class="button">
+            <button type="submit" class="btn-gradient">Register</button>
+        </div> <br>
+        <div class="info">
+            <a href="/login_page">Already have an account? Click here to login</a>
+        </div>
     </div>
-    <form action="/validateuser">
-        <h3>Registration Form</h3>
-        <label for="">Username</label>
-        <input type="Username" name="username">
-        <label for="">Password</label>
-        <input type="Password" name="password">
-        <label for="">E-mail</label>
-        <input type="text" name="">
-        <label for="">Address</label>
-        <input type="Address">
-        <button type="submit">submit</button>
     </form>
     {{message}}
-</body>
-</html>  
+{%endblock content%}
